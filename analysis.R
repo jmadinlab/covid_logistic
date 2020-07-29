@@ -25,9 +25,9 @@ for (i in 0:25) {
   phase2$day_adj <- 1:nrow(phase2)
   phase2$cases_adj <- phase2$cases - phase1$cases[nrow(phase1)]
   
-  png(paste0("figs/nyt_", dat$date[nrow(dat)], ".png"), width = 5, height = 4, units = 'in', res = 300)
+  png(paste0("figs/nyt_", dat$date[nrow(dat)], ".png"), width = 4, height = 4, units = 'in', res = 300)
   
-  plot(cases ~ day, phase1, main = "Hawai'i: logistic growth models", xlab = "Days since March 7", ylab = "Positive cases", xlim = c(1, 250), ylim = c(0, 2500), pch=1, col=rgb(0,0,0,0.3), type="p")  # Census data
+  plot(cases ~ day, phase1, main = "Hawai'i: logistic growth models", xlab = "Days since March 7", ylab = "Positive cases", xlim = c(1, 250), ylim = c(0, 3000), pch=1, col=rgb(0,0,0,0.3), type="p")  # Census data
   lines(dat$day, exp_fnc(dat$day, phase1_pars), col="black")
   phase2_mod <- nls(cases_adj ~ SSlogis(day_adj, phi1, phi2, phi3), phase2)
   summary(phase2_mod)
