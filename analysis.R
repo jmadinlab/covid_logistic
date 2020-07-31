@@ -9,7 +9,7 @@ data <- data[data$state=="Hawaii",] # Could do other states
 data$date[nrow(data)] # NYT a day behind, see optional component below
 
 # --------- Optional: add in current day for Hawaii --------- #
-data <- rbind(data, data.frame(date="2020-07-29", state="Hawaii", fips=NA, cases=data$cases[nrow(data)] + 109, deaths=NA))
+data <- rbind(data, data.frame(date="2020-07-30", state="Hawaii", fips=NA, cases=data$cases[nrow(data)] + 124, deaths=NA))
 # ----------------------------------------------------------- #
 
 data$day <- 1:nrow(data)
