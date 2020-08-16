@@ -6,4 +6,4 @@ Divided into the initial phase and a second phase starting when the lock-down fi
 
 # Create GIF below by pasting into terminal
 
-`convert -delay 15 *.png hawaii_nyt.gif`
+`convert -delay 5 *.png hawaii_nyt.gif`
